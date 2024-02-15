@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: varys
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/CLIMB-TRE/varys/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 7b84f2d212e87cbe539a78143c2695a8f61085327a63409aba2feed0f2d9231e
+  sha256: f524068608581823b6668afbc7affd1e4cb497c28c778f9996a119728392a428
 
 build:
   number: 0
