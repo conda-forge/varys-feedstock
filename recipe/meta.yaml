@@ -9,17 +9,17 @@ source:
   sha256: 296f9e1621551351f193d5608daebc5076d28415add65c398a16ffc902cacb6f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pika >=1.3.0
 
 test:
@@ -27,6 +27,7 @@ test:
     - varys
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
